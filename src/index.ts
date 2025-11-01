@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
 app.get('/about', function (req, res) {
   res.sendFile(path.join(__dirname, '..', 'components', 'about.htm'))
 })
+
+app.get('/favicon.ico', function (req, res) {
+  res.sendFile(path.join(__dirname, '..', 'public', 'favicon.ico'))
+})
+
+
 // Health check
 app.get('/healthz', (req, res) => {
   res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() })
