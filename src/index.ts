@@ -10,25 +10,19 @@ const app = express()
 // Home route - HTML
 app.get('/', (req, res) => {
   res.type('html').send(`
-    <!doctype html>
-    <html>
-      <head>
-        <meta charset="utf-8"/>
-        <title>Express on Vercel</title>
-        <link rel="stylesheet" href="/style.css" />
-      </head>
-      <body>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/api-data">API Data</a>
-          <a href="/healthz">Health</a>
-        </nav>
-        <h1>Welcome to Express on Vercel 🚀</h1>
-        <p>This is a minimal example without a database or forms.</p>
-        <img src="/logo.png" alt="Logo" width="120" />
-      </body>
-    </html>
+   <!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Nono Pain Chaud</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <p>Ce fut mon premier pas dans cet univers. Appelé "niveau 0" par certains, je l'appelle "le pont". C'est devenu ma passion. Mais s'il faut revenir au début... Je sais ! Mais pas toi (cheh)</p>
+    <script src="script.js"></script>
+  </body>
+</html>
   `)
 })
 
