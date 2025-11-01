@@ -12,6 +12,10 @@ app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, '..', 'public', 'favicon.ico'))
 })
 
+app.get('/pp.png', function (req, res) {
+  res.sendFile(path.join(__dirname, '..', 'public', 'pp.png'))
+})
+
 app.get('*', (req, res) => {
   if (["/", "/contact", "/discord", "/youtube", "/tiktok", "/chat"].indexOf(req.originalUrl)>-1) {
     const page = req.originalUrl === '/' ? 'index' : req.originalUrl.substring(1)
