@@ -7,9 +7,14 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const app = express()
-app.use((req, res, next) => {
+
+app.get('/favicon.ico', function (req, res) {
+  res.sendFile(path.join(__dirname, '..', 'public', 'favicon.ico'))
+})
+
+app.get('*', (req, res) => {
   if (["/", "/contact", "/discord", "/youtube", "/tiktok", "/chat"].indexOf(req.originalUrl)>-1) {
-  res.type('html').send(`<!doctype html>
+  res.type('html').status(200).send(`<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
@@ -36,7 +41,7 @@ app.use((req, res, next) => {
   </body>
 </html>`)
   } else {
-    res.type('html').send(`<!doctype html>
+    res.type('html').status(404).send(`<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
@@ -65,10 +70,6 @@ app.use((req, res, next) => {
   </body>
 </html>`)
   }
-})
-
-app.get('/favicon.ico', function (req, res) {
-  res.sendFile(path.join(__dirname, '..', 'public', 'favicon.ico'))
 })
 
 
