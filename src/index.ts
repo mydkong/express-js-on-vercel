@@ -36,7 +36,7 @@ app.use((req, res, next) => {
   </body>
 </html>`)
   } else {
-    req.type('html').send(`<!doctype html>
+    res.type('html').send(`<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
