@@ -12,10 +12,10 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/examples/tree/main/solutions/express&project-name=express&repository-name=express)
 
-### Clone and Deploy
+### Clone and Deploy to contribute
 
 ```bash
-git clone https://github.com/vercel/examples/tree/main/solutions/express
+git clone https://github.com/mydkong/express-js-on-vercel.git
 ```
 
 Install the Vercel CLI:
